@@ -11,7 +11,7 @@ const fileUpload = require("express-fileupload");
 let UploadCount = 0;
 const corsOptions = {
 
-    origin: "http://localhost:3000",
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"], // Allow these methods
     allowedHeaders: ["Content-Type"]
 }
