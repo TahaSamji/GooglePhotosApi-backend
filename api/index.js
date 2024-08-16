@@ -11,7 +11,7 @@ const fileUpload = require("express-fileupload");
 let UploadCount = 0;
 const corsOptions = {
 
-    origin: "http://localhost:3000",
+    origin: "https://google-photo-app.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"], // Allow these methods
     allowedHeaders: ["Content-Type"]
 }
@@ -48,7 +48,7 @@ app.get("/callback", async (req, res) => {
         console.log("Tokens:", tokens);
         access_token = tokens.access_token;
         oauth2Client.setCredentials(tokens);
-        return res.redirect("http://localhost:3000")
+        return res.redirect("https://google-photo-app.vercel.app")
 
     } catch (error) {
         console.error("Error exchanging code for tokens:", error.message);
