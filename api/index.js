@@ -15,9 +15,9 @@ const corsOptions = {
     methods: ["GET", "POST", "PUT", "DELETE"], // Allow these methods
     allowedHeaders: ["Content-Type"]
 }
-
-app.use(fileUpload());
 app.use(cors(corsOptions));
+app.use(fileUpload());
+
 
 const oauth2Client = new google.auth.OAuth2(
     CLIENT_ID = process.env.CLIENT_ID,
